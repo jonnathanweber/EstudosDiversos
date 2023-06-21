@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
+import com.fasterxml.jackson.annotation.JsonRootName;
+
 import br.com.alura.model.Bitcoin;
 import br.com.alura.service.BitcoinService;
 
@@ -14,6 +16,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
 @Path("/bitcoin")
+@JsonRootName("trades")
 public class BitcoinResource {
 
 	@Inject
